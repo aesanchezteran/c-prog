@@ -12,7 +12,7 @@ int main()
     
     printf("Ingresa tu nombre y apellido\n");
     scanf("%s %s",&nombre,&apellido);
-    printf("Tu nombre es: %s %s",nombre,apellido);
+    printf("Tu nombre es: %s %s\n",nombre,apellido);
 
     return 0;
 }
