@@ -1,5 +1,33 @@
 /*
-ejemplo de switch/case
+* Estructura switch/case
+* 
+* Permite ejecutar segmentos de código dependiendo
+* de distintos valores que toma una variable
+* entera.
+*
+* Una estructura switch/case tiene la siguiente
+* forma:
+
+    switch(variable int){
+        case valor1:
+            código;
+            :
+            break;
+        case valor2:
+            código;
+            :
+            break;
+        :
+        case valorn:
+            código;
+            :
+            break;
+        deafult:
+            código;
+            :
+            código; //No hace falta un break
+    }
+*
  */
 #include <stdio.h>
 int main(){

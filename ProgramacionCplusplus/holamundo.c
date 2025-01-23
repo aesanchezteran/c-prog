@@ -1,5 +1,5 @@
-/*Holamundo.c
-Alberto
+/* Holamundo.c
+Alberto Sánchez
 20 enero 2025
 */
 

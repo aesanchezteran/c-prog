@@ -1,5 +1,27 @@
 /*
-Este es un programa de prueba de la estructura if/else
+* Estructura if/else if/else
+* 
+* Esta estuctura de programación permite probar
+* distintas condiciones. Una vez que una condición
+* se cumple, se dejan de probar las demás.
+* 
+if(condicion1){
+    código;
+    :
+}else if(condicion2){
+    código;
+    :
+}else if(condición3){
+    código;
+    :    
+} 
+
+:
+
+else{
+    código;
+    :
+}
 */
 
 #include <stdio.h>
