@@ -17,9 +17,23 @@ int main(){
         cin >> a[i];
     }
 
+
     for(j=0;j<n;j++){
+
+        /* Este primer lazo se repite n veces en caso que el menor
+        de todos los numero se encuentre al final del arreglo
+        ya que con cada iteración del lazo el número solo se mueve
+        una posición hacia abajo. */
+
         for(i=0;i<(n-1);i++){
-            if(a[i] > a[i+1]){ // intercambio valores
+            /* Este lazo itera sobre cada elemento del 
+            arreglo y compara los valores de dos en dos.
+            Si identifica que el siguiente número en el arreglo
+            es mayor, lo intercambia.*/
+
+            if(a[i] > a[i+1]){ 
+            /* Si encuentro un valor que es menor
+            intercambio posiciones en el arreglo*/
                 temp = a[i];
                 a[i] = a[i+1];
                 a[i+1] = temp;
