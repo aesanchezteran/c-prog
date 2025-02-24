@@ -1,43 +1,52 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int fila = 0;
-    int columna = 0;
-    int M[3][3] = {{5,4,3},{2,1,3},{1,2,3}};
-    int V[3] = {};
-    int R[3] = {};
-    // Ingrese la matriz
-    for(fila = 0;fila<3;fila++){
-        for(columna=0;columna<3;columna++){
-            cout << "Ingrese el valor de M[" << fila << "][" << columna << "]";
-            cin >> M[fila][columna];
+    int i,j,r;
+    int A[3][3] = {};
+    int B[3][3] = {};
+    int C[3][3] ={};
+
+    // Ingrese la matriz A
+    for(i = 0;i<3;i++){
+        for(j=0;j<3;j++){
+            cout << "Ingrese el valor de A[" << i << "][" << j << "]";
+            cin >> A[i][j];
             cout << endl; 
         }
         cout << endl;
     }
     // Imprimir matriz en consola
-    for(fila = 0;fila<3;fila++){
-        for(columna=0;columna<3;columna++){
-            cout << M[fila][columna] << " ";
+    for(i = 0;i<3;i++){
+        for(j=0;j<3;j++){
+            cout << A[i][j] << " ";
         }
         cout << endl;
     }
-    // ingresamos el vector
-    for(fila = 0; fila <3; fila++){
-        cout << "Ingrese el valor de V[" << fila << "] ";
-        cin >> V[fila];
-        cout << endl;       
+    // Ingrese la matriz B
+    for(i = 0;i<3;i++){
+        for(j=0;j<3;j++){
+            cout << "Ingrese el valor de B[" << i << "][" << j << "]";
+            cin >> B[i][j];
+            cout << endl; 
+        }
+        cout << endl;
     }
 
-    // Multiplicacion de M*V
-    for(fila = 0;fila<3;fila++){
-        for(columna = 0;columna < 3; columna++){
-            R[fila] = R[fila]+M[fila][columna]*V[columna];
+    // Multiplicación de C = A*B
+    for(i=0;i<3;i++){
+        for(j=0;j < 3; j++){
+            for(r=0;r<3;r++){
+                C[i][j] += A[i][r]*B[r][j];
+            }
         }
     }
 
-    for(fila = 0; fila <3; fila++){
-        cout << R[fila] << endl;      
+    // Imprimir matriz C en consola
+    for(i = 0;i<3;i++){
+        for(j=0;j<3;j++){
+            cout << C[i][j] << " ";
+        }
+        cout << endl;
     }
 
     return 0;
