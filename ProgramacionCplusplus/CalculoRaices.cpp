@@ -19,7 +19,7 @@ int main(){
     cout << " raíces de una función arbitaria " << endl;
     cout << " ****************************************** " << endl;
     cout << " Alberto Sánchez, 2025 " << endl;
-    cout <<"" endl;
+    cout <<"" <<endl;
     cout << "Ingrese el valor inicial (xo): ";
     cin >> xo;
     cout << endl;
@@ -34,7 +34,7 @@ int main(){
         convergencia[iter] = e;
         xo = x;
         iter++;
-    } while( (e >= tol) | (iter <= MaxIter))
+    } while( (e >= tol) & (iter <= MaxIter));
 
     cout << "El algoritmo ha terminado por: " << endl;
     if(iter >= MaxIter){
@@ -51,16 +51,13 @@ int main(){
 // implementación de la función curva
 float curva(float x){
     float y = 0;
-    y = x*x*x*x+5*x*x*x-x*x+3*x+2;
+    y = (x-3)*(x-1);
     return y;
 }
 
 float error(float x1, float x2){
     float e = 0;
     // calcula el valor absoluto del error
-    e = x2 - x1;
-    if(e<0){
-        e = x1 - x2;
-    }
+    e = (x2 - x1)*(x2 - x1);
     return e;
 }
