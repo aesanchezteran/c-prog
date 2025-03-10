@@ -40,13 +40,13 @@ int main(){
     
         x[0] = 0;
 
-        while((x[i] <= xf) && (i <= 9999)){
+        while((x[i-1] <= xf) && (i <= 9999)){
             x[i] = xo+h*i;
             dy[i] = derivada(x[i],x[i-1],h);
             i++;
         }
 
-        cout << "La derivada en x= " << xf << " es " << dy[i] << endl;
+        cout << "La derivada en x= " << xf << " es " << dy[i-1] << endl;
         cout << endl;
         cout << " Presione 0 para salir  ";
         cin >> exit;
