@@ -5,6 +5,7 @@ int factorial(int n); // Prototipo de la funcion
 
 int main(){
     int n = 1;
+    int y;
     int exit = 1;
 
     cout << " ****************************************** " << endl;
@@ -26,14 +27,18 @@ int main(){
         cin >> exit;
         cout << endl;
     }
+
+    cout << " ****************************************** " << endl;
+    cout << " Muchas gracias! " << endl;
+    cout << " ****************************************** " << endl;
+    cout <<"" <<endl;
 }
 
 // Implementación de funciones
 int factorial(int n){
     int y = 1;
-    int i = 1;
-    for(i = 1; i<=n;i++){
-        y *=i;
+    if(n >= 1){
+        y = n*factorial(n-1);
     }
     return y;
 }
