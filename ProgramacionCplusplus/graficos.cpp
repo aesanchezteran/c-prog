@@ -1,3 +1,16 @@
+/************************************************************************************
+*   graficos.cpp
+*   Alberto Sánchez, 2025
+*    
+*   Descripción: Ejemplo básico para crear gráficos en C++ usando la libreria SDL.
+*   Este ejemplo dibuja una linea en una pantalla gráfica HD
+*
+*   Para correr este ejemplo se requiere tener instalado la libreria SDL:
+*   + En windows https://github.com/libsdl-org/SDL/releases/tag/release-3.2.8
+*   + En Linux sudo apt-get install libsdl2-dev
+*
+*************************************************************************************/
+
 #include <iostream>
 #include <math.h>
 #include <SDL2/SDL.h>
