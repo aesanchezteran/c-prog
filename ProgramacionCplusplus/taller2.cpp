@@ -134,7 +134,7 @@ void sistema_lineal(void){
             for(i=k+1;i<n;i++){
                 A[i][k] = A[i][k] / A[k][k];
                 for(j=k+1;j<n;j++){
-                    A[i][j] = A[i][j] - A[i][k]*A[k][j]/A[k][k];
+                    A[i][j] = A[i][j] - (A[i][k]*A[k][j]/A[k][k]);
                 }
             } 
         }

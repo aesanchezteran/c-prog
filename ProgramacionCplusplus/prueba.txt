@@ -1,0 +1,3 @@
+Este es un ejemplo de escritura en un archivo 
+ Esta es una segunda linea 
+ esta es una tercera linea
