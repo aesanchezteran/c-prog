@@ -15,8 +15,12 @@ int main(){
     float datos[100];
     float minimo = 0;
     float maximo = 0;
+    float rango = 0;
+    float intervalo = 0;
     string datos_char;
     int i = 0;
+    int n = 0;
+    int bin[10]={0};
     ifstream readFile;
     readFile.open("datos.txt");
 
@@ -27,8 +31,8 @@ int main(){
     }
     readFile.close();
 
-    minimo = array_min(datos[],i);
-    maximo = array_max(datos[],i);
+    minimo = array_min(datos,i);
+    maximo = array_max(datos,i);
     rango = maximo - minimo;
     intervalo = rango / 10;
     n = i;
@@ -62,4 +66,25 @@ int main(){
 
     return 0;
 
+}
+
+float array_min(float a[], int n){
+    float minimo = a[0];
+    int i = 0;
+    for(i=1;i<n;i++){
+        if(a[i] < minimo){
+            minimo = a[i];
+        }
+    }
+    return minimo;
+}
+float array_max(float a[], int n){
+    float maximo = a[0];
+    int i = 0;
+    for(i=1;i<n;i++){
+        if(a[i] > maximo){
+            maximo = a[i];
+        }
+    }
+    return maximo;
 }
