@@ -26,7 +26,7 @@ int main(){
 
     while((!readFile.eof()) && (i < 100)){  // eof - end of file
         readFile >> datos[i];
-        cout << datos[i];
+        cout << datos[i] << endl;
         i++;
     }
     readFile.close();
