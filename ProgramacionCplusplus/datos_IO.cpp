@@ -60,6 +60,8 @@ int main(){
         }
     }
 
+    cout << " El numero de valores por bin son " << endl;
+    cout << endl;
     for(i=0;i<10;i++){
         cout << bin[i] << endl;
     }
