@@ -9,7 +9,11 @@ int main(){
     cin >> n;
     cout << endl;
 
-    ptrDato = new float[n];
+    ptrDato = new (nothrow) float[n];
+    if(ptrDato == null){
+        cout << " No existe suficiente memoria " << endl;
+        return 0
+    }
 
     for(i=0;i<n;i++){
         cout << "Ingrese el dato " << i << " ";
