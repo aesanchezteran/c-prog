@@ -12,7 +12,7 @@ int main(){
     ptrDato = new float[n];
 
     for(i=0;i<n;i++){
-        cout << "Ingrese el dato " << i;
+        cout << "Ingrese el dato " << i << " ";
         cin >> *ptrDato;
         ptrDato++;
     }
