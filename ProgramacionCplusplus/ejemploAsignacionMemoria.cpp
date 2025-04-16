@@ -12,7 +12,7 @@ int main(){
     ptrDato = new (nothrow) float[n];
     if(ptrDato == null){
         cout << " No existe suficiente memoria " << endl;
-        return 0
+        return 0;
     }
 
     for(i=0;i<n;i++){
