@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
     int n,i;
-    char opcion;
+    string opcion;
     string nombre;
 
     struct calificaciones{
@@ -49,7 +49,7 @@ int main(){
         cout << " (S)alir " << endl;
         cin >> opcion;
 
-        if(opcion == N){
+        if(opcion == "N"){
             cout << " Ingrese el nombre a buscar ";
             cin >> nombre;
             cout << endl;
@@ -60,7 +60,7 @@ int main(){
                     cout << " Quimica: " << calificaciones_202420.quimica[i] << endl;
                 }
             }
-        } else if(opcion == S){
+        } else if(opcion == "S"){
             return 0;
         }
 
