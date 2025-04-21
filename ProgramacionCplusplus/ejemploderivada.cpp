@@ -14,12 +14,13 @@ float derivada(float x1, float x2, float h);
 
 int main(){
     float y;
-    float dy[10000];
-    float x[10000];
+    float * ptrDy;
+    float * ptrX;
     float xo;
     float xf;
     float h;
     int i = 1;
+    int n = 0;
     int exit = 1;
 
     cout << " ****************************************** " << endl;
@@ -38,15 +39,23 @@ int main(){
         cin >> h;
         cout << endl;
     
-        x[0] = 0;
+        n = (int) xf/h;
+        ptrDy = new (nothrow) float[n];
+        ptrX = new (nothrow) float[n];
+        if((ptrDy == null) | (ptrX == null)){
+            cout << " Error de asignación de memoria ";
+            return 0;  
+        }
 
-        while((x[i-1] <= xf) && (i <= 9999)){
-            x[i] = xo+h*i;
-            dy[i] = derivada(x[i],x[i-1],h);
+        ptrX[0] = 0;  // *ptrX = 0; 
+
+        for(i=0;i<n;i++){
+            ptrX[i] = xo+h*i;
+            ptrDy[i] = derivada(ptrX[i],ptrX[i-1],h);
             i++;
         }
 
-        cout << "La derivada en x= " << xf << " es " << dy[i-1] << endl;
+        cout << "La derivada en x= " << xf << " es " << ptrDy[i-1] << endl;
         cout << endl;
         cout << " Presione 0 para salir  ";
         cin >> exit;
@@ -57,6 +66,9 @@ int main(){
     cout << " Muchas gracias! " << endl;
     cout << " ****************************************** " << endl;
     cout <<"" <<endl;
+
+    delete[] ptrX;
+    delete[] ptrDy;
 }
 
 // Implementación de funciones
